@@ -1,0 +1,62 @@
+$expenses-color:rgba(145,35,54,0.8);
+$income-color:rgba(80,105,22,0.8);
+$budget-color:rgba(25,84,110,0.8);
+
+$primary-color:rgba(20,20,20,0.5);
+$overlay-color:rgba(10,12,15,0.5);
+$center-color:rgba(0,0,0,0.3);
+$light-color:rgba(200,200,200,1);
+$ultra-light-color:rgba(220,220,220,1);
+$text-color:rgba(104,113,100,0.8);
+$text-color-dark:rgba(80,90,90,0.9);
+$heading-color:rgba(140,100,180,0.5);
+
+$income-light-color:rgba(80,105,22,0.5);
+$expenses-light-color:rgba(145,35,54,0.5);
+
+$cross-color:rgba(150,10,10,0.8);
+
+$time-set:0.5s;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height:1.4;
+}
+
+h2{
+    text-align:center;
+    text-transform: uppercase;
+    font-size:1.5rem;
+}
+
+
+.color_changed:focus{
+    border:1px solid $expenses-color !important;
+}
+
+.color_button{
+    color:$expenses-color !important;
+}
+
+.zoom{
+    animation-name:zooming;
+    animation-duration:$time-set;
+}
+
+@keyframes zooming{
+    0%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

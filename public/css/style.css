@@ -1,0 +1,278 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.4;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+}
+
+.color_changed:focus {
+  border: 1px solid rgba(145, 35, 54, 0.8) !important;
+}
+
+.color_button {
+  color: rgba(145, 35, 54, 0.8) !important;
+}
+
+.zoom {
+  animation-name: zooming;
+  animation-duration: 0.5s;
+}
+
+@keyframes zooming {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#heading {
+  background: url("../img/4.jpg") no-repeat center center/cover;
+  height: 250px;
+  width: 100%;
+  position: relative;
+  color: #fff;
+}
+
+#heading:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 12, 15, 0.5);
+}
+
+#heading .center_heading {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  color: lightgrey;
+  max-width: 402px;
+}
+
+#heading .center_heading .display_month {
+  text-align: center;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+}
+
+#heading .center_heading .display .display_budget, #heading .center_heading .display .display_income, #heading .center_heading .display .display_expenses {
+  background-color: rgba(25, 84, 110, 0.8);
+  display: flex;
+  padding: 0.5rem 1rem;
+  flex: none;
+  border-radius: 10px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+#heading .center_heading .display .display_budget .display_value, #heading .center_heading .display .display_income .display_value, #heading .center_heading .display .display_expenses .display_value {
+  position: absolute;
+  right: 70px;
+}
+
+#heading .center_heading .display .display_budget .display_percentage, #heading .center_heading .display .display_income .display_percentage, #heading .center_heading .display .display_expenses .display_percentage {
+  position: absolute;
+  right: 10px;
+}
+
+#heading .center_heading .display .display_income {
+  background-color: rgba(80, 105, 22, 0.8);
+}
+
+#heading .center_heading .display .display_expenses {
+  background-color: rgba(145, 35, 54, 0.8);
+}
+
+#input {
+  padding: 1rem;
+  text-align: center;
+  background-image: linear-gradient(grey, white, white, white, white, white);
+}
+
+#input .input_description, #input .input_value, #input .input_btn, #input .input_type {
+  border: 1px solid #c8c8c8;
+  outline: none;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#input .input_type:focus, #input .input_description:focus, #input .input_value:focus {
+  border: 1px solid rgba(80, 105, 22, 0.8);
+}
+
+#input .input_btn {
+  color: rgba(80, 105, 22, 0.8);
+  border: none;
+  vertical-align: middle;
+  transition: transform 0.5s;
+}
+
+#input .input_btn:active {
+  transform: translateY(5px);
+}
+
+#container {
+  display: grid;
+  grid-template-areas: 'income expenses';
+  max-width: 1000px;
+  margin: auto;
+  grid-gap: 0 1rem;
+}
+
+#container .income {
+  grid-area: income;
+  margin: 0 1rem;
+}
+
+#container .income .income_title {
+  color: white;
+  background-color: rgba(80, 105, 22, 0.5);
+  margin: 1rem 0;
+  border-radius: 10px;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+#container .income .income_title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/4.jpg") no-repeat center center/cover;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+#container .expenses {
+  grid-area: expenses;
+  margin: 0 1rem;
+}
+
+#container .expenses .expenses_title {
+  color: white;
+  background-color: rgba(145, 35, 54, 0.5);
+  position: relative;
+  margin: 1rem 0;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+}
+
+#container .expenses .expenses_title:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../img/4.jpg") no-repeat center center/cover;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.data {
+  border-top: 1px solid #ccc;
+  border-radius: 50px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: rgba(104, 113, 100, 0.8);
+  box-shadow: 0 15px 10px #ddd;
+  display: flex;
+  padding: 0.5rem 2rem;
+  position: relative;
+}
+
+.data:nth-child(even) {
+  background-image: linear-gradient(to right, gainsboro, white, white, gainsboro);
+}
+
+.data:nth-child(odd) {
+  background-image: linear-gradient(to right, white, gainsboro, white);
+}
+
+.data .data_description {
+  font-size: 1.2rem;
+  transition: transform 0.5s;
+}
+
+.data .data_value {
+  position: absolute;
+  right: 75px;
+  transition: right 0.5s;
+}
+
+.data .data_delete {
+  position: absolute;
+  right: 25px;
+}
+
+.data .data_delete .data_delete_btn {
+  border: none;
+  outline: none;
+  color: rgba(150, 10, 10, 0.8);
+  cursor: pointer;
+  display: none;
+  font-size: 1.2rem;
+  transition: transform 0.5s;
+}
+
+.data .data_delete .data_delete_btn:active {
+  transform: translateY(4px);
+}
+
+.data .data_percentage {
+  position: absolute;
+  right: 25px;
+  transition: right 0.5s;
+}
+
+.data:hover .data_value {
+  right: 100px;
+  color: rgba(80, 90, 90, 0.9);
+}
+
+.data:hover .data_percentage {
+  right: 50px;
+  color: rgba(80, 90, 90, 0.9);
+}
+
+.data:hover .data_delete_btn {
+  display: block;
+}
+
+.data:hover .data_description {
+  color: rgba(80, 90, 90, 0.9);
+  transform: scale(1.3);
+}
+
+.data:hover .expense_color {
+  color: rgba(145, 35, 54, 0.8);
+}
+
+.data:hover .income_color {
+  color: rgba(80, 105, 22, 0.8);
+}

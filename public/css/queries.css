@@ -1,0 +1,25 @@
+#input {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: 'type description description description'  'value value value btn';
+}
+
+#input .input_type {
+  grid-area: type;
+}
+
+#input .input_description {
+  grid-area: description;
+}
+
+#input .input_value {
+  grid-area: value;
+}
+
+#input .input_btn {
+  grid-area: btn;
+}
+
+#container {
+  grid-template-areas: "income" "expenses";
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" media="screen and (max-width:580px)" href="./public/css/queries.css">
+    <title>Budget Calculator</title>
+</head>
+<body>
+    
+    <!--heading-->
+    <header id="heading">
+        <div class="center_heading">
+            <div class="display_month">Available Budget of %Month%</div>
+            <div class="display">
+                
+                <div class="display_budget">
+                    <div class="display_description">Budget</div>
+                    <div class="display_value budget_value">+3,243.24</div>
+                    <div class="display_percentage">---</div>
+                </div>
+
+                <div class="display_income">
+                    <div class="display_discription">Income</div>
+                    <div class="display_value income_value">+124.24</div>
+                    <div class="display_percentage">---</div>
+                </div>
+
+                <div class="display_expenses">
+                    <div class="display_discription">Expenses</div>
+                    <div class="display_value expenses_value">+3,243.24</div>
+                    <div class="display_percentage expenses_percentage">32%</div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!--Input taken -->
+    <section id="input">
+        <select class="input_type">
+            <option value="inc" selected>+</option>
+            <option value="exp">-</option>
+        </select>
+        <input type="text" class="input_description" placeholder="Add Income description">
+        <input type="number" class="input_value" placeholder="Value">
+        <button class="input_btn">
+            <i class="fas fa-check-circle fa-2x"></i>
+        </button>
+    </section>
+
+    <!--display data-->
+    <section id="container">
+        <!--income Panel-->
+        <div class="income">
+            <h2 class="income_title">&nbsp;&nbsp;Income&nbsp;&nbsp;</h2>
+            
+            <!--income List-->
+            <div class="income_list">
+                <!--1-->
+                <!--<div class="data" id="inc-0">
+                    <div class="data_description">%description%</div>
+                    <div class="data_value">%value%</div>
+                    <div class="data_percentage">---</div>
+                    <div class="data_delete">
+                        <button class="data_delete_btn">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>-->
+
+                <!--2-->
+                <!--<div class="data" id="inc-1">
+                    <div class="data_description">Salary</div>
+                    <div class="data_value">+342.23</div>
+                    <div class="data_percentage">---</div>
+                    <div class="data_delete">
+                        <button class="data_delete_btn">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>-->
+            </div>
+
+            </div>
+        </div>
+
+        <!--Expenses Panel-->
+        <div class="expenses">
+            <h2 class="expenses_title">Expenses</h2>
+
+            <!--expenses List-->
+            <div class="expenses_list">
+                <!--1-->
+                <!--<div class="data" id="exp-0">
+                    <div class="data_description">%description%</div>
+                    <div class="data_value">%value%</div>
+                    <div class="data_percentage">10%</div>
+                    <div class="data_delete">
+                        <button class="data_delete_btn">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>-->
+                
+                <!--2-->
+                <!--<div class="data" id="exp-1">
+                    <div class="data_description">Salary</div>
+                    <div class="data_value">+342.23</div>
+                    <div class="data_percentage">4%</div>
+                    <div class="data_delete">
+                        <button class="data_delete_btn">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                </div>-->
+            
+            </div>
+            </div>
+
+        </div>
+    </section>
+
+</body>
+</html>
+<script rel="stylesheet" src="app.js"></script>
